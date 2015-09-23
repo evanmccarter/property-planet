@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	
 	$("button.set").click(function() {
 		var lat1 = parseInt($("input.lat1").val(), 10);
 		var lat2 = parseInt($("input.lat2").val(), 10);
@@ -8,7 +8,7 @@ $(document).ready(function() {
 		SimpleStorage.set(lat1, lat2, long1, long2);
 		addToLog("SimpleStorage.set("+lat1+", "+lat2+", "+long1+", "+long2+")");
 	});
-
+	
 	document.getElementsByClassName("get")[0].addEventListener('click', function() {
 		var glat1 = SimpleStorage.getla1().toNumber();
 		var glat2 = SimpleStorage.getla2().toNumber();
@@ -17,9 +17,9 @@ $(document).ready(function() {
 		$(".value").html(glat1+", "+glat2+", "+glon1+", "+glon2);
 		addToLog("SimpleStorage.get()");
 	});
-
+	
 	var addToLog = function(txt) {
 		$(".logs").append("<br>" + txt);
 	}
-
+	
 });

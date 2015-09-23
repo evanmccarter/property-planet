@@ -3,14 +3,14 @@ contract SimpleStorage {
 	uint public lat2;
 	uint public long1;
 	uint public long2;
-
+	
 	function SimpleStorage(uint initialValue) {
 		lat1 = initialValue;
 		lat2 = initialValue;
 		long1 = initialValue;
 		long2 = initialValue;
 	}
-
+	
 	function set(uint x) {
 		lat1 = x;
 	}
